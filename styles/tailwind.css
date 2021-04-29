@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* overrides */
+@layer base {
+  a {
+    @apply text-accent underline cursor-pointer;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block rounded-sm px-4 py-2 no-underline bg-primary text-white hover:bg-primary-light;
+  }
+  .btn-outline {
+    @apply inline-block rounded-sm px-4 py-2 no-underline border text-black border-primary hover:bg-gray-100 hover:border-primary-light;
+  }
+}
+
+:root {
+  --color-primary: #282828;
+  --color-primary-light: #323232;
+  --color-primary-dark: #222;
+
+  --color-accent: #00b0d0;
+  --color-accent-light: #80d8e8;
+  --color-accent-dark: #0087b3;
+}
+
+@variants hover {
+  .border-l-accent {
+    border-left-color: var(--color-accent);
+  }
+
+  .border-b-accent {
+    border-bottom-color: var(--color-accent);
+  }
+}
